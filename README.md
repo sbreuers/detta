@@ -29,3 +29,5 @@ Biternion nets by L. Beyer et al.
 ### Skeleton pose
 HumanPose by U. Rafi et al.
 
+## Temporal Filtering
+Allows for temporal smoothing and free-flight option.
