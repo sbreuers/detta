@@ -1,3 +1,6 @@
 [submodule "BiternionNets-ROS"]
 	path = BiternionNets-ROS
 	url = https://github.com/sbreuers/BiternionNets-ROS.git
+[submodule "skeletons_cnn_pytorch"]
+	path = skeletons_cnn_pytorch
+	url = git@git.rwth-aachen.de:Stefan.Breuers/skeletons_cnn_pytorch.git
