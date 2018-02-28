@@ -17,3 +17,15 @@ We investigate the combinational benefits on the example of head and skeleton po
 We also study the potential of a so-called "free-flight" mode, where the analysis of a person attribute only relies on the filter's predictions for certain frames.
 Here, our experiments show that this helps boosting the runtime performance significatly, while the quality of the observations hardly drops. TODO: TRUE?
 This also holds the potential to reduce power consumption and share the usage of \mbox{(GPU-)memory} on a mobile platform, when running many analysis components, which is especially useful in the era of expensive deep learning methods.
+
+
+## Detection-Tracking
+Please refer to https://github.com/spencer-project/spencer_people_tracking for the detection-tracking pipeline.
+
+## Analysis
+### Head orientation
+Biternion nets by L. Beyer et al.
+
+### Skeleton pose
+HumanPose by U. Rafi et al.
+
