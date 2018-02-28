@@ -1,0 +1,3 @@
+[submodule "BiternionNets-ROS"]
+	path = BiternionNets-ROS
+	url = https://github.com/sbreuers/BiternionNets-ROS.git
