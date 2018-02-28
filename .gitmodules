@@ -4,3 +4,6 @@
 [submodule "skeletons_cnn_pytorch"]
 	path = skeletons_cnn_pytorch
 	url = git@git.rwth-aachen.de:Stefan.Breuers/skeletons_cnn_pytorch.git
+[submodule "general_smoother"]
+	path = general_smoother
+	url = git@git.rwth-aachen.de:Stefan.Breuers/general_smoother.git
