@@ -1,6 +1,6 @@
 # DetTA: Detection-Tracking-Analysis Pipeline for Temporal Robust Person Attributes
 
-![Overview of the detection-tracking-analysis pipeline](images/pipeline.png?raw=true "Overview of the detection-tracking-analysis pipeline")
+![Overview of the detection-tracking-analysis pipeline](images/pipeline2.png?raw=true "Overview of the detection-tracking-analysis pipeline")
 
 Code repository for the under review IROS submission
 
