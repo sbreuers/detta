@@ -1,10 +1,10 @@
-# DetTA: Detection-Tracking-Analysis Pipeline for Temporal Robust Person Attributes
+# DetTA: Detection-Tracking-Analysis
 
 ![Overview of the detection-tracking-analysis pipeline](images/pipeline.png?raw=true "Overview of the detection-tracking-analysis pipeline")
 
 Code repository for the under review IROS submission
 
-"DetTA: Detection-Tracking-Analysis Pipeline for Temporal Robust Person Attributes"
+"Detection-Tracking for Efficient Person Analysis: The DetTA Pipeline"
 
 Stefan Breuers, Lucas Beyer, Umer Rafi and Bastian Leibe
 (RWTH Aachen University, Visual Computing Institute)
