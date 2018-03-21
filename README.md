@@ -20,6 +20,11 @@ We also study the potential of a so-called "free-flight" mode, where the analysi
 Here, our study shows that this boosts the runtime dramatically, while the prediction quality remains stable.
 This insight is especially important for reducing power consumption and sharing precious (GPU-)memory when running many analysis components on a mobile platform, especially so in the era of expensive deep learning methods.
 
+## Clone the Repository
+Please regard that the repository consist of several submodules, which need to be initialized after cloning:
+1) git clone https://github.com/sbreuers/detta.git
+2) (cd to repo)
+3) git submodule update --init
 
 ## Detection-Tracking
 Please refer to https://github.com/spencer-project/spencer_people_tracking for the detection-tracking pipeline.
