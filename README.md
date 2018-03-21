@@ -41,6 +41,8 @@ Allows for temporal smoothing and free-flight option.
 
 ## Additional Files
 ### Skeleton Annotation Tool
+![The skeleton annotation tool](images/annotool_ex.png?raw=true "The skeleton annotation tool")
+
 In case you face your own annotation task regarding skeleton poses, we provide our MATLAB tool.
 The `skeleton_annotation_tool.m` let you annotate joints, the `skeleton_viewer.m` helps in visualizing already annotated persons.
 
