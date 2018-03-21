@@ -32,4 +32,30 @@ Biternion nets by L. Beyer et al.
 HumanPose by U. Rafi et al.
 
 ## Temporal Filtering
+### General
 Allows for temporal smoothing and free-flight option.
+
+### Usage
+
+### Free-flight mode
+
+## Additional Files
+### Skeleton Annotation Tool
+In case you face your own annotation task regarding skeleton poses, we provide our MATLAB tool.
+The `skeleton_annotation_tool.m` let you annotate joints, the `skeleton_viewer.m` helps in visualizing already annotated persons.
+
+**Usage**: The tool goes through the images in the provided folder (adapt `main_path` and `seq_path` regarding your purpose). It expects images (`img_path`, default: *{main_path}/{seq_path}/img/img_%08d.jpg*) and an annotation file (`anno_path`, default: *{main_path}/{seq_path}/annotations.txt* in the MOTChallenge format (https://motchallenge.net/instructions/).
+
+The tool then lets you annotate the joints via left mouse click in the following order: head, neck, left shoulder/elbow/wrist, right shoulder/elbow/wrist (`joint_names`) and saves everything in a subfolder structure (`save_folder`, `save_path`, `save_path_occ`).
+To minimize annotation effort, one can adapt a step size (`anno_step`), frames inbetween are interpolated. We suggest not to choose a value to high depending on the sequence due to annotation noise.
+
+Buttons:
+- left-click to annotate the current joint (red color)
+- right-click to set the current joint to "occluded" (blue color)
+- "s" to skip this frame (set all joints to occluded)
+- "r" to redo the last annotated joint (unfortunately does not work across frames, so be careful with the last joint)
+- "c" to redo all joints in this frame
+
+The tool can be closed at any time and it will restart after the last fully annotated frame of one person.
+
+Parts of the code can be adapted to serve any "point annotation"-task. Just take care of the `joint_names` variable and the annotation loop regarding frames and ids.
