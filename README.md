@@ -93,5 +93,7 @@ Parts of the code can be adapted to serve any "point annotation"-task. Just take
 
 ## References
 [1] Jafari O. H. and Mitzel D. and Leibe B.. *Real-Time RGB-D based People Detection and Tracking for Mobile Robots and Head-Worn Cameras*. IEEE International Conference on Robotics and Automation (ICRA), 2014.
+
 [2] Beyer L. and Hermans A. and Leibe B.. *Biternion nets: Continuous head pose regression from discrete training labels.* German Conference on Pattern Recognition (GCPR), 2015.
+
 [3] Rafi U. and Leibe B. and Gall J.. *An Efficient Convolutional Network for Human Pose Estimation.* British Machine Vision Conference (BMVC), 2016.
