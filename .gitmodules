@@ -3,7 +3,7 @@
 	url = https://github.com/sbreuers/BiternionNets-ROS.git
 [submodule "skeletons_cnn_pytorch"]
 	path = skeletons_cnn_pytorch
-	url = git@git.rwth-aachen.de:Stefan.Breuers/skeletons_cnn_pytorch.git
+	url = https://git.rwth-aachen.de/Stefan.Breuers/skeletons_cnn_pytorch
 [submodule "general_smoother"]
 	path = general_smoother
-	url = git@git.rwth-aachen.de:Stefan.Breuers/general_smoother.git
+	url = https://git.rwth-aachen.de/Stefan.Breuers/general_smoother
