@@ -9,6 +9,12 @@ Code repository for the under review IROS submission
 Stefan Breuers, Lucas Beyer, Umer Rafi and Bastian Leibe
 (RWTH Aachen University, Visual Computing Institute)
 
+## TL;DR
+- detection-tracking pipeline provides both region of interest and track ID
+- this allows for running further analysis modules (e.g. head/body pose) and integrating temporal information of the observation for each tracked person, resulting in a smoother analysis signal
+- furthermore this allows for a "free-flight"-mode, where you only run (potentially expensive) analysis modules with a certain stride and rely on the predicition of the temporal filters inbetween, resulting in a performance boost
+- code can be extended to support further analysis modules
+
 ## Abstract
 In the past decade many robots were deployed in the wild, and people detection and tracking is an important component of such deployments.
 On top of that, one often needs to run modules which analyze persons and extract higher level attributes such as age and gender, or dynamic information like gaze and pose.
