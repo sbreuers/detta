@@ -33,21 +33,24 @@ Please regard that the repository consist of several submodules, which need to b
 3) git submodule update --init
 
 ## Detection-Tracking
-Please refer to https://github.com/spencer-project/spencer_people_tracking for the detection-tracking pipeline.
+In our experiments we focused on vision-based analysis modules and thus used two vision based people detetors:
+depth-based upperbody detector by Jafari et al. [1] and RGB-based groundHOG bei Sudowe et. al [2].
 
-Here, we utilized the vision-based MDL tracker by Jafari et al. [1]:
+Regarding tracking, we utilized the vision-based MDL tracker by Jafari et al. [1]:
 Basically bi-directional Kalman Filters to build an overcomplete set of hypotheses. An individual track score based on appearance motion and detector confidence as well as interaction scores between tracks based on physical overlap and shared detections are computed. A solution is found with quadratic pseudo boolean optimization by a multi-branch method.
+
+The pipeline is highly modular and can be extended with more detector and tracking methods (e.g. laser-based) when it is needed for futher analysis modules. Please refer to https://github.com/spencer-project/spencer_people_tracking for details on the modular detection-tracking pipeline.
 
 ## Analysis
 ### Head orientation
-Biternion nets by Beyer et al. [2]:
+Biternion nets by Beyer et al. [3]:
 We predict head orientation using BiternionNets, for which code is publicly available.
 Training data is collected at an airport by having volunteers turn in circles in front of our robot, the annotation is straightforward and done in just a few hours.
 Biternions have the advantage of providing continuous head pose estimates, which are better suited for filtering than classes, even when trained on discrete labels.
-The network architecture is exactly the very lightweight one introduced in [2], but we further perform background-subtraction using the depth data provided by the camera.
+The network architecture is exactly the very lightweight one introduced in [3], but we further perform background-subtraction using the depth data provided by the camera.
 
 ### Skeleton pose
-HumanPose by Rafi et al. [3]:
+HumanPose by Rafi et al. [4]:
 For skeleton poses, we use the HumanPose estimation framework.
 The framework is an adaptation of GoogleNet, using only the first 17 layers from the network architecture.
 The fully connected layer and the average pooling layer in the last stages of the network are removed to make the framework fully convolutional.
@@ -100,6 +103,8 @@ Parts of the code can be adapted to serve any "point annotation"-task. Just take
 ## References
 [1] Jafari O. H. and Mitzel D. and Leibe B.. *Real-Time RGB-D based People Detection and Tracking for Mobile Robots and Head-Worn Cameras*. IEEE International Conference on Robotics and Automation (ICRA), 2014.
 
-[2] Beyer L. and Hermans A. and Leibe B.. *Biternion nets: Continuous head pose regression from discrete training labels.* German Conference on Pattern Recognition (GCPR), 2015.
+[2] Sudowe P, and Leibe B.. *Efficient use of geometric constraints for sliding-window object detection in video.* International Conference on Computer Vision Systems (ICCVS), 2011.
 
-[3] Rafi U. and Leibe B. and Gall J.. *An Efficient Convolutional Network for Human Pose Estimation.* British Machine Vision Conference (BMVC), 2016.
+[3] Beyer L. and Hermans A. and Leibe B.. *Biternion nets: Continuous head pose regression from discrete training labels.* German Conference on Pattern Recognition (GCPR), 2015.
+
+[4] Rafi U. and Leibe B. and Gall J.. *An Efficient Convolutional Network for Human Pose Estimation.* British Machine Vision Conference (BMVC), 2016.
