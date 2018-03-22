@@ -50,7 +50,7 @@ The HumanPose estimation framework was trained on the [MPI dataset](http://human
 
 ## Temporal Filtering
 ### General
-By using the output boxes with a consistent person IDs coming from the detection-tracking part, one can run individual (vision-based) analysis modules on each person and at the same time apply temporal filtering. This would otherwise not be possible 
+By using the output boxes with a consistent person IDs coming from the detection-tracking part, one can run individual (vision-based) analysis modules on each person and at the same time apply temporal filtering. This would otherwise not be possible, as the input region (e.g. the bounding box) as well as the mapping to different persons in the scene (track ID). This also allows for a "free flight"-mode (see below). Note that the temporal integration can be made as long as there the tracking remains consistent, i.e., if there is an ID switch, a new filter needs to be initialized.
 
 ### Usage
 Files:
@@ -62,7 +62,7 @@ Example:
 - `self.smoother_dict` is created during the initialization of the class analysis module, keeping track of all the filters (can be also done inside the launch file if you use the command-string)
 - the `self.smoother_dict` is then automatically updated inside the callback function of the analysis module
 
-### Free-flight mode
+### "Free-flight" mode
 - With the free-flight option we rely on the filters' prediction instead of running the (potentially expensive) analysis modules each frame.
 - By setting a `self.stride` higher than 1 in the above examples the free-flight mode is automatically activated (can also be adjusted in the launch file)
 - Depending on the used stride and the used analysis module, the quality may drop a little (especially for large strides for attributes with complex motion behaviour), while the performance may get a huge boost (even already for smaller strides, starting from 2)
