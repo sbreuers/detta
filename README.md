@@ -68,7 +68,8 @@ Files:
 
 Example:
 - An example usage can be seen in `scripts/predict.py` of BiternionNets-ROS (one temporal filter for each head) and in `scripts/skeletons.py` of skeletons_cnn_pytorch (16 individual filters for all 16 joints)
-- `self.smoother_dict` is created during the initialization of the class analysis module, keeping track of all the filters (can be also done inside the launch file if you use the command-string)
+- `self.smoother_dict` is created during the initialization of the class analysis module, keeping all the filters as value in a dictionary with the trackID as key (can be also done inside the launch file if you use the command-string)
+- to get the trackID, the analysis modules needs to subscribe to the trackedPerson topic, coming from the tracker
 - the `self.smoother_dict` is then automatically updated inside the callback function of the analysis module
 
 ### "Free-flight" mode
