@@ -101,6 +101,9 @@ The tool can be closed at any time and it will restart after the last fully anno
 
 Parts of the code can be adapted to serve any "point annotation"-task. Just take care of the `joint_names` variable and the annotation loop regarding frames and ids.
 
+## Contact
+Stefan Breuers, breuers@vision.rwth-aachen.de
+
 ## References
 [1] Jafari O. H. and Mitzel D. and Leibe B.. *Real-Time RGB-D based People Detection and Tracking for Mobile Robots and Head-Worn Cameras*. IEEE International Conference on Robotics and Automation (ICRA), 2014.
 
