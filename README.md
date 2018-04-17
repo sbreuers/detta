@@ -9,6 +9,8 @@ Code repository for the under review IROS submission
 Stefan Breuers, Lucas Beyer, Umer Rafi and Bastian Leibe
 (RWTH Aachen University, Visual Computing Institute)
 
+[Jump to Screenshots!](#screenshots)
+
 ## TL;DR
 - detection-tracking pipeline provides both region of interest and track ID
 - this allows for running further analysis modules (e.g. head/body pose) and integrating temporal information of the observation for each tracked person, resulting in a smoother analysis signal
@@ -76,6 +78,21 @@ Example:
 - With the free-flight option we rely on the filters' prediction instead of running the (potentially expensive) analysis modules each frame.
 - By setting a `self.stride` higher than 1 in the above examples the free-flight mode is automatically activated (can also be adjusted in the launch file)
 - Depending on the used stride and the used analysis module, the quality may drop a little (especially for large strides for attributes with complex motion behaviour), while the performance may get a huge boost (even already for smaller strides, starting from 2)
+
+## Screenshots
+### Single persons
+![Single person example far away](images/detta_s2.png)
+Example for single person, showing the upperbody detector (top left), fullbody groundHog detector (bottom left), tracking (middle), head orientation (top right) and skeleton pose (bottom right).
+
+![Single person example close-by](images/detta_s1.png "Another example for a single person, close to the robot.")
+Another example for a single person, close to the robot.
+
+### Multiple persons
+![Multi person example, heads](images/detta_m1.png "Example for multiple persons, focus on head orientation. Note how the noisy measurement (red) and the prediction (blue) gets filtered to the smoothed estimation (green).")
+Example for multiple persons, focus on head orientation. Note how the noisy measurement (red) and the prediction (blue) gets filtered to the smoothed estimation (green).
+
+![Multi person example, skeletons](images/detta_m2.png "Example for multiple persons, focus on skeleton pose. The measurement (red) gets smoothed (blue) with the prediction (not shown here) to increase the performance.")
+Example for multiple persons, focus on skeleton pose. The measurement (red) gets smoothed (blue) with the prediction (not shown here) to increase the performance.
 
 
 ## Additional Files
