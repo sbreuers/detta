@@ -71,7 +71,10 @@ Files:
 - `smoother2.py` is our own implementation of the G-Filter, GH-Filter and Kalman-Filter and is used in our experiments.
 
 Example:
-- An example usage can be seen in `scripts/predict.py` of BiternionNets-ROS (one temporal filter for each head) and in `scripts/skeletons.py` of skeletons_cnn_pytorch (16 individual filters for all 16 joints)
+- Make sure that a detection-tracking pipeline is up and running ,e.g., the [SPENCER framework from above](#detection-tracking) or the [STRANDS framework](https://github.com/strands-project); has been successfully tested with both ones, just make sure `TrackedPersons2D` messages are published for 2d analysis modules
+- An example for two analysis modules and the usage of the filters can be found in `scripts/predict.py` of BiternionNets-ROS (one temporal filter for each head) and in `scripts/skeletons.py` of skeletons_cnn_pytorch (16 individual filters for all 16 joints); both are working with the `TrackedPersons2D` message type
+    - roslaunch biternion predict_{strands,spencer}.launch [smooth:={true,false}] [stride:={..}]
+    - roslaunch skeletons_cnn_pytorch pose_cnn_pytorch[_{strands,spencer}].launch [smooth:={true,false}] [stride:={..}]
 - `self.smoother_dict` is created during the initialization of the class analysis module, keeping all the filters as value in a dictionary with the trackID as key (can be also done inside the launch file if you use the command-string)
 - to get the trackID, the analysis modules needs to subscribe to the trackedPerson topic, coming from the tracker
 - the `self.smoother_dict` is then automatically updated inside the callback function of the analysis module
