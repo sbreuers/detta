@@ -1,4 +1,4 @@
-# DetTA: Detection-Tracking-Analysis
+# Detection-Tracking for Efficient Person Analysis: The DetTA Pipeline
 
 ![Overview of the detection-tracking-analysis pipeline](images/pipeline.png?raw=true "Overview of the detection-tracking-analysis pipeline")
 
@@ -10,6 +10,8 @@ Stefan Breuers, Lucas Beyer, Umer Rafi and Bastian Leibe
 (RWTH Aachen University, Visual Computing Institute)
 
 [Jump to Screenshots!](#screenshots)
+
+[Jump to Video!](#video)
 
 ## TL;DR
 - detection-tracking pipeline provides both region of interest and track ID
@@ -78,6 +80,10 @@ Example:
 - With the free-flight option we rely on the filters' prediction instead of running the (potentially expensive) analysis modules each frame.
 - By setting a `self.stride` higher than 1 in the above examples the free-flight mode is automatically activated (can also be adjusted in the launch file)
 - Depending on the used stride and the used analysis module, the quality may drop a little (especially for large strides for attributes with complex motion behaviour), while the performance may get a huge boost (even already for smaller strides, starting from 2)
+
+## Video
+
+[![Detection-Tracking for Efficient Person Analysis: The DetTA Pipeline](https://img.youtube.com/vi/koF1a-iuQxI/0.jpg)](https://youtu.be/koF1a-iuQxI)
 
 ## Screenshots
 ### Single persons
