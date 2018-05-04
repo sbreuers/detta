@@ -9,6 +9,8 @@ Code repository for the under review IROS submission
 Stefan Breuers, Lucas Beyer, Umer Rafi and Bastian Leibe
 (RWTH Aachen University, Visual Computing Institute)
 
+arXiv preprint: https://arxiv.org/abs/1804.10134
+
 [Jump to Screenshots!](#screenshots)
 
 [Jump to Video!](#video)
