@@ -63,6 +63,9 @@ The fully connected layer and the average pooling layer in the last stages of th
 A pose decoder consisting of a transposed convolution and a sigmoid layer is appended to the framework to up-sample the low resolution features from the 17th layer to high resolution heat maps for different body joints.
 The HumanPose estimation framework was trained on the [MPI dataset](http://human-pose.mpi-inf.mpg.de/) and is also able to also detect occluded joints.
 
+### Models
+Coming soon.
+
 ## Temporal Filtering
 ### General
 By using the output boxes with a consistent person IDs coming from the detection-tracking part, one can run individual (vision-based) analysis modules on each person and at the same time apply temporal filtering. This would otherwise not be possible, as the input region (e.g. the bounding box) as well as the mapping to different persons in the scene (track ID). This also allows for a "free flight"-mode (see below). Note that the temporal integration can be made as long as there the tracking remains consistent, i.e., if there is an ID switch, a new filter needs to be initialized.
