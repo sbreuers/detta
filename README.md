@@ -64,7 +64,13 @@ A pose decoder consisting of a transposed convolution and a sigmoid layer is app
 The HumanPose estimation framework was trained on the [MPI dataset](http://human-pose.mpi-inf.mpg.de/) and is also able to also detect occluded joints.
 
 ### Models
-Coming soon.
+
+For reproduceability, we also provide the analysis models which we have used in our paper's evaluations.
+Note that if your environment is significantly different, you might need to collect your own data and train your own models.
+Make sure to place the model files in the `models` subfolder of the corresponding analysis module.
+
+- [The BiternionNet model for head-orientation](https://omnomnom.vision.rwth-aachen.de/data/BiternionNets/v2_head_80_50.pth) (MD5: `4668316c5f400f646f6dd0d48e30db24`)
+- [The HumanPose model for, well, human pose](https://omnomnom.vision.rwth-aachen.de/data/mpi.pth) (MD5: `24a02547b38f46cfbcb6f70e53b205b3`)
 
 ## Temporal Filtering
 ### General
